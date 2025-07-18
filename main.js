@@ -6,11 +6,11 @@ let currentQuestion = 0
 let score = 0
 let gameStarted = false
 
-// Configuración de juegos
+// Declaración de variables necesarias
 const gameConfig = {
   1: {
     name: "Nivel 1",
-    emojis: "🌲🐾",
+    emojis: "🌲🐦",
     games: [
       { id: "quiz", name: "Preguntas", description: "Responde preguntas sobre fauna y flora", class: "quiz-btn" },
       {
@@ -29,7 +29,7 @@ const gameConfig = {
   },
   2: {
     name: "Nivel 2",
-    emojis: "🌺🐍",
+    emojis: "🐍🌳",
     games: [
       {
         id: "quiz",
@@ -53,32 +53,44 @@ const gameConfig = {
   },
 }
 
-// Preguntas para el nivel 1
 const level1Questions = [
-  { question: "¿Cuál es el animal más grande de Colombia?", answers: ["Oso pardo", "Jirafa", "Elefante"], correct: 0 },
   {
-    question: "¿Cuál es el árbol más alto de Colombia?",
-    answers: ["Palma de cera", "Árbol de caoba", "Árbol de guayacán"],
-    correct: 1,
+    question: "¿Cuál es el animal más grande de Colombia?",
+    answers: ["Jirafa", "Elefante", "Tigre", "Cocodrilo"],
+    correct: 3,
+    image: "elephant.jpg",
+  },
+  {
+    question: "¿Cuál es el hábitat del jaguar?",
+    answers: ["Selva", "Desierto", "Montaña", "Pradera"],
+    correct: 0,
+    emoji: "🌴",
   },
 ]
 
-// Preguntas para el nivel 2
 const level2Questions = [
-  { question: "¿Cuál es el insecto más pequeño del mundo?", answers: ["Mosquito", "Mariposa", "Abra"], correct: 2 },
-  { question: "¿Cuál es el pájaro más rápido del mundo?", answers: ["Águila", "Pavo real", "Ánade"], correct: 0 },
+  {
+    question: "¿Cuál es el insecto más pequeño del mundo?",
+    answers: ["Mosquito", "Mariposa", "Abeja", "Luciérnaga"],
+    correct: 3,
+    emoji: "🦋",
+  },
+  {
+    question: "¿Cuál es el pájaro más alto de Colombia?",
+    answers: ["Águila", "Pavo real", "Ánade", "Carpintero"],
+    correct: 0,
+    image: "eagle.jpg",
+  },
 ]
 
-// Elementos para el juego de clasificación en nivel 1
 const level1Classification = [
-  { emoji: "🐶", name: "Perro", type: "fauna" },
-  { emoji: "🌸", name: "Rosa", type: "flora" },
+  { name: "Tigre", emoji: "🐅", type: "fauna" },
+  { name: "Palma", emoji: "🌴", type: "flora" },
 ]
 
-// Pares para el juego de emparejamiento en nivel 2
 const level2Matching = [
   { animal: "Tigre", habitat: "Selva" },
-  { animal: "Pinguino", habitat: "Antártida" },
+  { animal: "Cocodrilo", habitat: "Río" },
 ]
 
 // Elementos del DOM
